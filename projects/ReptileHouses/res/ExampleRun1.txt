@@ -1,0 +1,39 @@
+package reptilehouse;
+
+public class Main {
+  /**
+   * Main class.
+   * @param args Declaration.
+   */
+  public static void main(String []args) {
+    Houses life = new House(3);
+    Habitats gym = new Habitat("boston", 15);
+    life.addHabitat(gym);
+    System.out.println("These are the current amount of habitats: " + life.getAmountOfHabitats());
+    System.out.println(life.printIndex());
+    System.out.println(life.printMap());
+    System.out.println(life.lookUp("crocodile"));
+    System.out.println(life.reportNaturalFeatures());
+    System.out.println(life.printSign());
+    Habitats lab = new Habitat("lagos", 15);
+    Animal abdul = new Reptile(" croCodIle ", "it has tough skin",
+            2, " lake ", 20,
+            30, false, 3, true);
+    Animal frags = new Reptile(" sNaKe ", "it has no legs", 2,
+            " ForEst ", -20, 25,
+            false, 3, true);
+    Animal somto = new Reptile(" alligator ", "it has tough skin",
+            2, " lake ", 31,
+            35, false, 3, true);
+    life.addHabitat(lab);
+    life.addAnimal(abdul);
+    life.addAnimal(frags);
+    life.addAnimal(somto);
+    System.out.println("These are the current amount of habitats: " + life.getAmountOfHabitats());
+    System.out.println(life.printIndex());
+    System.out.println(life.printMap());
+    System.out.println(life.lookUp("crocodile"));
+    System.out.println(life.reportNaturalFeatures());
+    System.out.println(life.printSign());
+  }
+}
